@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="618.0" prefWidth="976.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project4.CurrentOrderController">
+   <children>
+      <GridPane prefHeight="618.0" prefWidth="976.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="976.0" minWidth="10.0" prefWidth="976.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="483.199951171875" minWidth="0.0" prefWidth="0.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="201.59998168945313" minHeight="10.0" prefHeight="85.39999389648438" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="201.59998168945313" minHeight="10.0" prefHeight="80.20000610351562" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="358.8" minHeight="10.0" prefHeight="320.9999938964844" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="409.60001220703117" minHeight="0.0" prefHeight="63.599987792968705" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="140.39999999999998" minHeight="10.0" prefHeight="73.20001220703125" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Order" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <GridPane GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="483.2000732421875" minWidth="10.0" prefWidth="229.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="697.600048828125" minWidth="10.0" prefWidth="35.799951171874994" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="774.4000488281251" minWidth="10.0" prefWidth="172.20002441406257" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="697.600048828125" minWidth="10.0" prefWidth="543.3999755859375" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="76.6" minHeight="10.0" prefHeight="76.6" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="46.79999999999999" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="18.60001220703124" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Order Number" wrappingWidth="144.02502155303955" GridPane.halignment="RIGHT">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="OrderNumber" editable="false" prefHeight="26.0" prefWidth="251.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+               </children>
+            </GridPane>
+            <ListView fx:id="PizzaOrdersList" prefHeight="320.0" prefWidth="934.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <GridPane GridPane.rowIndex="3">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="432.0000244140625" minWidth="10.0" prefWidth="145.4" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="529.9999755859375" minWidth="0.0" prefWidth="168.6" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="702.400048828125" minWidth="10.0" prefWidth="149.3999755859375" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="702.400048828125" minWidth="10.0" prefWidth="256.19997558593747" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="702.400048828125" minWidth="10.0" prefWidth="258.20000000000005" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="63.6" minHeight="10.0" prefHeight="63.6" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="42.79999999999999" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="16.60001220703124" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="subtotal $" wrappingWidth="93.66912579536438" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="sales tax $" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="subtotal" editable="false" GridPane.columnIndex="1" />
+                  <TextField fx:id="salesTax" editable="false" GridPane.columnIndex="3" />
+                  <Button fx:id="RemovePizzaButton" mnemonicParsing="false" onAction="#handleRemovePizza" prefHeight="42.0" prefWidth="162.0" text="Remove Pizza" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+            <GridPane GridPane.rowIndex="4">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="321.199951171875" minWidth="10.0" prefWidth="149.60003051757815" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="587.9999694824219" minWidth="10.0" prefWidth="549.2000732421875" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="263.1999755859375" minWidth="10.0" prefWidth="242.39992675781252" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="73.19999999999999" minHeight="10.0" prefHeight="73.19999999999999" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="48.79999999999999" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="19.60001220703124" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="order total $" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="orderTotal" editable="false" prefHeight="26.0" prefWidth="506.0" GridPane.columnIndex="1" />
+                  <Button fx:id="PlaceOrderButton" mnemonicParsing="false" onAction="#handlePlaceOrder" prefHeight="40.0" prefWidth="163.0" text="Place Order" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
